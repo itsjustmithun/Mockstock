@@ -1,0 +1,76 @@
+div#time_wrapper {
+	width: 45%;
+	margin: 10px 2.5%;
+	float: left;
+}
+div#leader_wrapper {
+	width: 45%;
+	margin: 10px 2.5%;
+	height: 500px;
+	float: right;
+	overflow: auto;
+}
+div#news, div#companies {
+	width: 45%;
+	margin: 10px 2.5%;
+	float: left;
+}
+div#news {
+	height: 360px;
+	overflow: auto;
+}
+div#companies {
+	width: 95%;
+}
+ul#co-list>li>p, ul#news-list>li>p,form#add_company_form>input[type=text] {
+    width: 7%;
+}
+ul#co-list>li>p.remaining {
+    width: 7%;
+}
+ul#co-list>li>p.name,form#add_company_form>input[name=stock] {
+    width: 30%;
+}
+ul#news-list>li>p.event {
+    width: 60%;
+}
+ul#co-list>li>p.id, ul#news-list>li>p.id {
+    width: 5%;
+}
+ul#co-list>li>button, ul#news-list>li>button {
+    width: 12%;
+}
+ul#news-list {
+    height: 326px;
+}
+
+ul#news-list>li>p>textarea {
+    width: 96%;
+}
+
+
+
+
+
+
+form#add_company_form,form#add_news_form {
+    padding: 10px;
+    margin-left: 3%;
+}
+form#add_company_form>input[type=text] {
+    text-align: left;
+    vertical-align: bottom;
+}
+ul#co-list>li>p>input,ul#news-list>li>p>input {
+    width: 98%;
+}
+
+ul#co-list>li#heading,ul#news-list>li#heading {
+    height: initial;
+}
+ul#co-list>li#heading *,ul#news-list>li#heading * {
+    text-transform: uppercase;
+    font-weight: 600;
+    height: initial;
+    text-align: left;
+}

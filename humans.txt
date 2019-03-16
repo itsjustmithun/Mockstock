@@ -1,0 +1,20 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+    <name>			<role>		<github>
+    Anush C. Reddy	Developer	anush-cr
+
+# THANKS
+
+	<name>
+    Abhishek Vijaykumar
+    K Veneet Reddy
+
+# TECHNOLOGY COLOPHON
+
+    HTML5, CSS3, Reset CSS
+    jQuery, Modernizr
+    PHP, MySQL
+    Heroku, ClearDB plugin on heroku

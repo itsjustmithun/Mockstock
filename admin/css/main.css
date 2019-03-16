@@ -1,0 +1,489 @@
+/*! HTML5 Boilerplate v4.3.0 | MIT License | http://h5bp.com/ */
+
+html,
+button,
+input,
+select,
+textarea {
+    color: #222;
+}
+
+html {
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+audio,
+canvas,
+img,
+video {
+    vertical-align: middle;
+}
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.browsehappy {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+
+/* ==========================================================================
+   Reset.css
+   ========================================================================== */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+a {
+    text-decoration: none; 
+}
+body {
+    background-color: #DADADA;
+    /*#eaebec*/
+    color: #333;
+    line-height: normal;
+    font-size: 15px;
+    font-family: 'Open Sans',Helvetica,sans-serif;
+}
+header {
+    background-color: #fff;
+    height: 50px;
+}
+header p {
+    padding-left: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    line-height: 50px;
+    float: left;
+}
+header a {
+    float: right;
+}
+header p#teams-registered, p#event-status {
+    float: right;
+    padding-right: 10px;
+}
+p#event-status {
+    color: #2E92DA;
+    padding-right: 10px;
+}
+div#content {
+    padding: 5px 15px;
+}
+div.card {
+    background-color: #fff;
+    margin: 10px 0px; 
+    min-height: 70px;
+    float: left;
+    width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.137255) 1px 2px 2px 0px, rgba(0, 0, 0, 0.2) 1px 3px 1px -2px, rgba(0, 0, 0, 0.117647) 0px 1px 5px 0px;
+}
+div.card>h1.heading {
+    background-color: #2E92DA;
+    /*#1F61B3*/
+    color: white;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1.2px;
+    font-size: 15px;
+    padding: 8px 0;
+    padding-left: 9px;
+}
+div#event-err>p,div#todo>p {
+    font-size: 15px;
+    padding: 8px;
+    padding-left: 10px;
+}
+div#db-actions>form {
+    display: inline-block;
+    margin: 10px;
+    border: 3px solid #999;
+    padding-left: 5px;
+}
+div#db-actions>form>input[type=submit] {
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #f1f2f2;
+    outline: none;
+    padding: 5px 20px;
+    border: 3px solid #999;
+    background-color: #999;
+    cursor: pointer;
+    margin: 0;
+}
+div.card>a,form>input[type=submit],ul#news-list>li>button, ul#co-list>li>button, a.start, div#todo>form>input[type=submit],div#db-actions>button, div#db-cred>button, form#db_update>input[type=submit]{
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #f1f2f2;
+    outline: none;
+    padding: 8px 20px;
+    border: 3px solid #999;
+    background-color: #999;
+    cursor: pointer;
+    margin: 15px 10px;
+}
+div#db-actions>form>input[type=submit]:hover {
+    border: none;
+    border-left: 3px solid #999;
+    padding: 8px 21.5px;
+}
+a.start {
+    margin: 6px;
+    display: inline-block;
+}
+a.start:hover {
+    background-color: #fff;
+    color: #666;
+}
+div>a{
+    display: inline-block;
+}
+div.card>a:hover,form>input[type=submit]:hover, div#todo>form>input[type=submit]:hover, div#db-actions>button:hover,div#db-actions>form>input[type=submit]:hover,div#db-cred>button:hover, form#db_update>input[type=submit]:hover {
+    background-color: #fff;
+    color: #666;
+}
+div#db-cred>p {
+    display: inline-block;
+    padding: 10px;
+}
+div#db-cred>button, form#db_update>input[type=submit] {
+    text-transform: capitalize;
+    padding: 3px 15px;
+}
+form>textarea {
+    width: 200px;
+    height: 70px;
+    border: 2px solid #aaa;
+}
+form#db_update {
+    padding-left: 10px;
+}
+
+form#db_update>input[type=text], ul>li>p>input[type=text],form>input[type=text] {
+    outline: none;
+    border: none;
+    border-bottom: 2px solid #aaa;
+    width: 150px;
+    margin-top: 8px;
+    margin-right: 10px;
+}
+ul#co-list>li,ul#news-list>li {
+    border-bottom: 1px solid #000;
+    height: 73.5px;
+}
+
+ul#co-list>li>p,ul#news-list>li>p {
+    vertical-align: top;
+    display: inline-block;
+    padding: 0px 2px;
+    height: 63.5px;
+    padding: 5px 0;
+}
+ul#co-list>li>p:nth-child(2n), ul#news-list>li>p:nth-child(2n) {
+    background-color: #e8e8e8;
+}
+
+ul#co-list>li>p, ul#news-list>li>p,form#add_company_form>input[type=text] {
+    width: 6%;
+    overflow: hidden;
+    text-align: left;
+    padding-left: 2px;
+    padding-right: 3px;
+    text-align: right;
+}
+form#add_company_form,form#add_news_form {
+    padding: 10px;
+    margin-left: 3%;
+}
+form#add_company_form>input[type=text] {
+    text-align: left;
+    vertical-align: bottom;
+}
+ul#co-list>li>button, ul#news-list>li>button,form#add_company_form>input[type=submit],form#add_news_form>input[type=submit] {
+    width: 6%;
+    padding: 6px 0;
+    text-transform: capitalize;
+}
+ul#co-list>li>p>input,ul#news-list>li>p>input {
+    width: 98%;
+}
+ul#co-list>li>p>textarea,ul#news-list>li>p>textarea {
+    width: 98%;
+    height: 80%;
+    border: 2px solid #aaa;
+}
+ul#co-list>li>p.id, ul#news-list>li>p.id {
+    width: 3%;
+    text-align: right;
+    padding-right: 2px;
+}
+ul#co-list>li>p.name,form#add_company_form>input[name=stock] {
+    width: 20%;
+    text-align: left;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+ul#co-list>li>p.description,ul#news-list>li>p.event,form#add_company_form>textarea,form#add_news_form>textarea {
+    width: 31%;
+    text-align: left;
+    height: 63.5px;
+    overflow: auto;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+form#add_company_form>textarea,form#add_news_form>textarea {
+    width: 32%;
+    vertical-align: bottom;
+}
+form#add_news_form>textarea {
+    width: 61.5%;
+}
+ul#news-list>li>p.event {
+    width: 60%;
+}
+ul#co-list>li>p.remaining {
+    width: 6.5%;
+    padding-right: 3px;
+    text-align: right;
+}
+ul#news-list {
+    height: 200px;
+    overflow: auto;
+}
+
+ul#co-list>li#heading,ul#news-list>li#heading {
+    height: initial;
+}
+ul#co-list>li#heading *,ul#news-list>li#heading * {
+    text-transform: uppercase;
+    font-weight: 600;
+    height: initial;
+    text-align: left;
+}
+
+
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+
+}
+
+@media print,
+       (-o-min-device-pixel-ratio: 5/4),
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 120dpi) {
+
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+.ir {
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+    *text-indent: -9999px;
+}
+
+.ir:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 150%;
+}
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+/* ==========================================================================
+   Print styles
+   ========================================================================== */
+
+@media print {
+    * {
+        background: transparent !important;
+        color: #000 !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    .ir a:after,
+    a[href^="javascript:"]:after,
+    a[href^="#"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group;
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    @page {
+        margin: 0.5cm;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}

@@ -1,0 +1,38 @@
+<?php
+$msg = "";
+$success=false;
+$interval = 30;//seconds
+require_once '../db_functions.php';
+$event = "";
+$conn = connect_db();
+if(gettype($conn) == 'string') {
+	$msg = "DB Error: ".$conn;
+}
+else {
+	$cur_time = time();
+	$query = "SELECT `time_started` from `event_details` WHERE `id`=1";
+	if(!$result = $conn->query($query)) {
+		$msg = "DB Error: " . $conn->error;
+	} else {
+		while($row = $result->fetch_assoc()) {
+			$time_started = $row['time_started']+(30);
+		}
+		$event_id = ceil(($cur_time - $time_started)/$interval);
+		$query = "SELECT `event` from `news` WHERE `id`=$event_id LIMIT 1";
+		if(!$result = $conn->query($query)) {
+			$msg = "DB Error: (Error fetching news)" . $conn->error;
+		} else {
+			while($row = $result->fetch_assoc()) {
+				$event = $row['event'];
+			}
+			$msg = "News Event fetched successfully";
+			$success = true;
+		}
+	}
+	close_db($conn);
+}
+if($success)
+	echo json_encode(Array('success'=>1,'event_id'=>$event_id,'event'=>$event),JSON_PRETTY_PRINT,JSON_UNESCAPED_SLASHES);
+else
+	echo json_encode(Array('success'=>0,'message'=>$msg),JSON_PRETTY_PRINT,JSON_UNESCAPED_SLASHES);
+?>
