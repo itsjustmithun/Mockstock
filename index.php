@@ -267,22 +267,6 @@
 </body>
 <?php } ?>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!-- <div class="row">
 	<div class="col-sm-4">
 		<label for="1">name</label>
